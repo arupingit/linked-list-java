@@ -31,8 +31,7 @@ public class Problem2 {
 		LinkedList.printList(sampleList);
 		
 		System.out.println();
-		System.out.println("list length : " + LinkedList.getLength(sampleList));
-		Integer data = findNthNode(sampleList, 1);
+		Integer data = findNthNode(sampleList, 3);
 		if(data==null){
 			System.out.println("list length is shorth");
 		} else {
@@ -41,7 +40,7 @@ public class Problem2 {
 	}
 	
 	private static Integer findNthNode(LinkedList list, int n){
-		int length = LinkedList.getLength(list);
+		int length = LinkedList.length;
 		if(length < n){
 			return null;
 		} 

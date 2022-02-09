@@ -3,6 +3,7 @@ package com.arup.linkedList.chapter3;
 public class LinkedList {
 
 	Node head;
+	static int length;
 	
 	static class Node{
 		int data;
@@ -29,6 +30,7 @@ public class LinkedList {
 			}
 			last.next = new Node(data);
 		}
+		length++;
 		return list;
 	}
 	
@@ -45,22 +47,5 @@ public class LinkedList {
 				currentNode = currentNode.next;
 			}
 		}
-	}
-	
-	/** 
-	 * get linked list length
-	 */
-	public static int getLength(LinkedList list){
-		int length = 0;
-		if(list.head == null){
-			return length;
-		} 
-		Node currentNode = list.head;
-		while(currentNode!=null){
-			length++;
-			currentNode = currentNode.next;
-		}
-		return length;
-	}
-	
+	}	
 }
