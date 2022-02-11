@@ -1,15 +1,12 @@
 package com.arup.linkedList.chapter3;
 
-import java.util.Hashtable;
-
 import com.arup.linkedList.chapter3.LinkedList.Node;
 
-public class Problem8 {
+public class Problem10 {
 	/**
-	 * Find if the list is a circular Linked list using hashtable
+	 * Floyd's algorithm
 	 */
 	static LinkedList sampleList;
-	static int counter = 1;
 	static{
 		//create circular list
 		sampleList = new LinkedList();
@@ -23,18 +20,15 @@ public class Problem8 {
 		sampleList.insertNode(sampleList, node4);
 		sampleList.insertNode(sampleList, node2);
 	}
-	
 	public static void main(String[] args){
-		Hashtable<Integer,Node> table = new Hashtable<>();
-		Node currentNode = sampleList.head;
-		while(currentNode!=null){
-			Node temp = table.get(currentNode.data);
-			if(temp!=null && temp.equals(currentNode)){
+		Node slowPointer = sampleList.head;
+		Node fastPointer = sampleList.head;
+		while(fastPointer!=null && fastPointer.next!=null){
+			slowPointer = slowPointer.next;
+			fastPointer = fastPointer.next.next;
+			if(slowPointer==fastPointer){
 				System.out.println("List is a Circular Linked List");
 				return;
-			} else {
-				table.put(currentNode.data, currentNode);
-				currentNode = currentNode.next;
 			}
 		}
 		System.out.println("List is not a Circular Linked List");
