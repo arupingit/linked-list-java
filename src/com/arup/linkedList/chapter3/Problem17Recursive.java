@@ -2,7 +2,7 @@ package com.arup.linkedList.chapter3;
 
 import com.arup.linkedList.chapter3.LinkedList.Node;
 
-public class Problem18 {
+public class Problem17Recursive {
 	/**
 	 * Reverse singly linked list recursively
 	 */
