@@ -1,6 +1,6 @@
-package com.arup.linkedList.chapter3;
+package com.arup.linkedList.dsandalgomadeeasyinjava;
 
-import com.arup.linkedList.chapter3.LinkedList.Node;
+import com.arup.linkedList.dsandalgomadeeasyinjava.LinkedList.Node;
 
 public class Problem10 {
 	/**

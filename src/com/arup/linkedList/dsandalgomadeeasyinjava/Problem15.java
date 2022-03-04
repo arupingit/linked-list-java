@@ -1,10 +1,10 @@
-package com.arup.linkedList.chapter3;
+package com.arup.linkedList.dsandalgomadeeasyinjava;
 
-import com.arup.linkedList.chapter3.LinkedList.Node;
+import com.arup.linkedList.dsandalgomadeeasyinjava.LinkedList.Node;
 
-public class Problem12 {
+public class Problem15 {
 	/**
-	 * Floyd's algorithm find node with start of the loop
+	 * Floyd's algorithm find length of the loop
 	 */
 	static LinkedList sampleList;
 	static{
@@ -27,13 +27,13 @@ public class Problem12 {
 			slowPointer = slowPointer.next;
 			fastPointer = fastPointer.next.next;
 			if(slowPointer==fastPointer){
-				System.out.println("List is a Circular Linked List");
-				slowPointer = sampleList.head;
+				int counter = 1;
+				fastPointer = fastPointer.next;
 				while(slowPointer != fastPointer){
-					slowPointer = slowPointer.next;
 					fastPointer = fastPointer.next;
+					counter++;
 				}
-				System.out.println("the node with start of the loop is : "+ slowPointer.data);
+				System.out.println("length of the loop is : "+ counter);
 				return;
 			}
 		}

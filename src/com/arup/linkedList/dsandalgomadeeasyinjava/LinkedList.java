@@ -1,4 +1,4 @@
-package com.arup.linkedList.chapter3;
+package com.arup.linkedList.dsandalgomadeeasyinjava;
 
 public class LinkedList {
 
