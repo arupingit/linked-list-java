@@ -46,6 +46,15 @@ public class LinkedList {
 				return false;
 			return true;
 		}
+
+		/* (non-Javadoc)
+		 * @see java.lang.Object#toString()
+		 */
+		@Override
+		public String toString() {
+			return "Node [data=" + data + "]";
+		}
+		
 	}
 	
 	/**
@@ -92,7 +101,7 @@ public class LinkedList {
 		} else {
 			Node currentNode = list.head;
 			while(currentNode!=null){
-				System.out.print(currentNode.data + ",");
+				System.out.print(currentNode.toString() + "-->");
 				currentNode = currentNode.next;
 			}
 		}
