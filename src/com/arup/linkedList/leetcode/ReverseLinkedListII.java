@@ -19,7 +19,7 @@ public class ReverseLinkedListII {
 		ListNode node2 = new ListNode(2,node3);
 		ListNode node1 = new ListNode(1,node2);
 		ListNode.printList(node1);
-		System.out.println("\nRecursive Solution : ");
+		System.out.println("\nFinal List : ");
 		
 		ListNode.printList(reverseBetween(node1,2,4));
 	}
