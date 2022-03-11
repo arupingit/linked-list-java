@@ -1,6 +1,8 @@
-package com.arup.linkedList.leetcode;
+package com.arup.linkedList.dsandalgomadeeasyinjava;
 
-public class EvenOddLinkedList {
+import com.arup.linkedList.leetcode.ListNode;
+
+public class Problem63 {
 
 	public static void main(String[] args) {
 		ListNode node5 = new ListNode(5);
